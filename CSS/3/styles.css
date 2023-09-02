@@ -1,0 +1,57 @@
+
+*{
+    margin: 0;
+}
+
+body{
+    /* min-height: 100vh;
+    display: flex;
+    flex-direction: column; */
+    min-height: 200vh;
+}
+
+nav, footer{
+    flex-shrink: 0;
+}
+
+section{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    position: relative;
+}
+
+section span{
+    position: fixed;
+    background: rgb(4, 0, 255);
+    width: 100px;
+    height: 100px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    padding: 10px;
+    list-style: none;
+}
+
+#logo{
+    width: 80vw;
+    height: 200px;
+    background: red;
+    border-bottom: 1px solid gray;
+}
+
+.layer{
+    padding: 10px 0;
+    background: rgb(219, 219, 219);
+    width: 100%;
+}
