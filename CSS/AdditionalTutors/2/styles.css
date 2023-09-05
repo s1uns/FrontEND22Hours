@@ -1,0 +1,21 @@
+* {
+    background: pink;
+}
+.red{
+    background: red;
+}
+#blue{
+    background: blue;
+}
+div.red{
+    color: blue;
+}
+div.red.green-text{
+    color: green;
+}
+li{
+    background: aqua;
+}
+div b {
+    background: wheat;
+}
