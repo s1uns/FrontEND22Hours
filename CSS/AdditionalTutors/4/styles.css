@@ -1,0 +1,25 @@
+.container{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970;
+    }
+}
+@media screen and (max-width: 992) {
+    .container{
+        max-width: 750;
+    }
+}
+@media screen and (max-width: 767) {
+    .container{
+        max-width: none;
+        content: 'LoremIpsum';
+        min-width: 200px;
+    }
+}
