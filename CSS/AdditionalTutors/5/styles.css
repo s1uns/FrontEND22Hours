@@ -1,15 +1,17 @@
-*{
+/* *{
     box-sizing: border-box;
 
 }
-
-body{
+*, *:after, *::before{
+    box-sizing: inherit;
+} */
+/* body{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} */
 
 .container{
     position: relative;
@@ -117,4 +119,17 @@ body{
     place-items: center;
     position: relative;
     background: url("/image.jpg") no-repeat center center/cover;
-  }
+}
+ /*Here is more about box-sizing*/
+.items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 33.3%;
+
+    height: 50px;
+    background-color: green;
+    border: 1px solid #000;
+}
