@@ -1,0 +1,14 @@
+.item{
+    padding: 40px;
+    font-size: 25px;
+    border: 1px solid black;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 98vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
