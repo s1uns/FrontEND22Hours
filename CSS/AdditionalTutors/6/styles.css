@@ -1,4 +1,4 @@
-.container{
+/* .container{
     position: relative;
     display: flex;
     align-items: center;
@@ -31,4 +31,15 @@
 }
 .btn:hover {
     color: #fff;
-}
+} */
+
+.profile-card {
+    width: 300px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+    position: relative;
+    background: url("/image.jpg") no-repeat center center/cover;
+  }
