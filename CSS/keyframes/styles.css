@@ -1,6 +1,12 @@
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 .content{
-    background: white;
-    padding: 50px;
+    width: 100vw;
 }
 
 .content:hover .content-circle{
@@ -13,13 +19,12 @@
     background-color: black;
     border-radius: 50%;
     position: relative;
-    left: 0;
     animation: white-circle 2s linear infinite alternate 0s forwards;
 }
 
 @keyframes white-circle{
     0%{
-        left: 0;
+        left: 0%;
     }
     25%{
         border-radius: 25%;
@@ -31,6 +36,6 @@
         border-radius: 25%;
     }
     100%{
-        left: 500px;
+        left: 100%;
     }
 }
