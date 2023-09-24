@@ -1,19 +1,18 @@
-
-body{
+body {
     height: 100vh;
     display: flex;
     align-items: center;
 }
 
-.content{
+.content {
     width: 100vw;
 }
 
-.content:hover .content-circle{
+.content:hover .content-circle {
     animation-play-state: paused;
 }
 
-.content-circle{
+.content-circle {
     width: 100px;
     height: 100px;
     background-color: black;
@@ -22,20 +21,24 @@ body{
     animation: white-circle 2s linear infinite alternate 0s forwards;
 }
 
-@keyframes white-circle{
-    0%{
+@keyframes white-circle {
+    0% {
         left: 0%;
     }
-    25%{
+
+    25% {
         border-radius: 25%;
     }
-    50%{
+
+    50% {
         border-radius: 50%;
     }
-    75%{
+
+    75% {
         border-radius: 25%;
     }
-    100%{
+
+    100% {
         left: 100%;
     }
 }
