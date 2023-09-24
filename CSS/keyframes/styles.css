@@ -1,0 +1,36 @@
+.content{
+    background: white;
+    padding: 50px;
+}
+
+.content:hover .content-circle{
+    animation-play-state: paused;
+}
+
+.content-circle{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    animation: white-circle 2s linear infinite alternate 0s forwards;
+}
+
+@keyframes white-circle{
+    0%{
+        left: 0;
+    }
+    25%{
+        border-radius: 25%;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    75%{
+        border-radius: 25%;
+    }
+    100%{
+        left: 500px;
+    }
+}
