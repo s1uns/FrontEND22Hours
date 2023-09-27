@@ -1,12 +1,32 @@
-const firstVar = 250;
-console.log(firstVar);
+// // const firstVar = 250;
+// // console.log(firstVar);
 
-let myFriends = [];
+// // let myFriends = [];
 
-function AddMyFriends(friend) {
-    myFriends.push(friend);
-    console.log(myFriends);
+// // function AddMyFriends(friend) {
+// //     myFriends.push(friend);
+// //     console.log(myFriends);
+// // }
+
+// // AddMyFriends("illia");
+// // AddMyFriends("petro");
+
+// const age = 19;
+
+// function AgeAge() {
+//     const age = 23;
+//     console.log(age);
+// }
+
+// AgeAge();
+// console.log(age);
+
+let heading = document.querySelector('.helloWorld');
+
+let listItems = document.querySelectorAll('ul li');
+
+for(let i = 0; i<listItems.length; i++){
+    listItems[i].innerText = "Bruh";
 }
 
-AddMyFriends("illia");
-AddMyFriends("petro");
+heading.innerText = "Hello Illia!!";
