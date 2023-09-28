@@ -33,30 +33,33 @@
 
 const incrementBtn = document.querySelector('#increment');
 const decrementBtn = document.querySelector('#decrement');
-const counter = document.getElementById('counter');
+const counterEl = document.getElementById('counter');
 const ulElement = document.getElementById('list-items');
-let count = 0;
+let counter = 0;
 function incrementCounter(){
-    count++;
-    counter.innerText = count;
+    counter++;
+    counterEl.innerText = counter;
 
     //Create the element
     const li = document.createElement('li');
-    const b = document.createElement('b');
-    // li.innerText = ("Item " + count);
-    const textNode = document.createTextNode("Item ");
-    b.appendChild(textNode);
-    const textNode2 = document.createTextNode(count);
-    li.appendChild(b);
-    li.appendChild(textNode2);
+    li.innerHTML = '<b>Something</b> ' + counter;
+    // const b = document.createElement('b');
+    // // li.innerText = ("Item " + count);
+    // const textNode = document.createTextNode("Item ");
+    // b.appendChild(textNode);
+    // const textNode2 = document.createTextNode(count);
+    // li.appendChild(b);
+    // li.appendChild(textNode2);
+
+
 
     //Append the elemnt to the list
     ulElement.appendChild(li);
 }
 
 function decrementCounter(){
-    count--;
-    counter.innerText = count;
+    counter--;
+    counterEl.innerText = counter;
 }
 
 incrementBtn.addEventListener('click', incrementCounter);
