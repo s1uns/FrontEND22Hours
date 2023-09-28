@@ -36,13 +36,16 @@ const decrementBtn = document.querySelector('#decrement');
 const counterEl = document.getElementById('counter');
 const ulElement = document.getElementById('list-items');
 let counter = 0;
-function incrementCounter(){
+
+function incrementCounter() {
     counter++;
     counterEl.innerText = counter;
 
     //Create the element
     const li = document.createElement('li');
+    li.setAttribute('data-counter', counter);
     li.innerHTML = '<b>Something</b> ' + counter;
+    console.log(li)
     // const b = document.createElement('b');
     // // li.innerText = ("Item " + count);
     // const textNode = document.createTextNode("Item ");
@@ -57,9 +60,12 @@ function incrementCounter(){
     ulElement.appendChild(li);
 }
 
-function decrementCounter(){
+function decrementCounter() {
+    const li = ulElement.querySelector('[data-counter = "' + counter +'"]');
+    li.remove();
     counter--;
     counterEl.innerText = counter;
+    
 }
 
 incrementBtn.addEventListener('click', incrementCounter);
