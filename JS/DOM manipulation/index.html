@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>DOM manipulation</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- <p>...before the script...</p>
+
+<script src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script>
+<p>...after the script...</p> -->
+
+<!-- <p>...before the script...</p>
+
+<script src="https://javascript.info/article/script-async-defer/long.js?speed=1" defer></script>
+<p>...after the script...</p> -->
+
+<!-- <script async src="https://google-analytics.com/analytics.js"></script> -->
+
+
+<ul>
+    <li title = "Venus">Венера</li>
+    <li>Марс</li>
+    <li>Сатурн</li>
+    <li>Земля</li>
+</ul>
+<script>
+    let list = document.querySelectorAll("ul > li");
+    for(let val of list){
+        console.log(val.innerHTML);
+    }
+</script>
+</body>
+</html>
