@@ -1,0 +1,10 @@
+.msg{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    background: #20454B;
+    padding: 5px;
+    border-radius: 5px;
+    color: #eee;
+    font-size: 24px;
+}
