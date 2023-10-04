@@ -2,7 +2,7 @@ import React from "react";
 
 function Custom(props) {
     return <h1>
-        Hello, {props.name}
+        {props.greeting}, {props.name}
     </h1>
 }
 
