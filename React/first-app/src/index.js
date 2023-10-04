@@ -8,10 +8,11 @@ import { add } from './calculator';
 console.log(add(4, 5))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<h1>Hello world!</h1>
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
+root.render(
+  // <h1>Hello world!</h1>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
