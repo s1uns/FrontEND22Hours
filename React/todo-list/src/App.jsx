@@ -18,8 +18,8 @@ function App() {
     })
   }
 
-  function deleteItem() {
-
+  function deleteItem(itemId) {
+    setTodos(oldTodos => oldTodos.filter(item => item.id !== item(itemId)))
   }
 
 
