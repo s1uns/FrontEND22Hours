@@ -1,0 +1,15 @@
+.task {
+    max-width: 500px;
+    max-height: 500px;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.task-info {
+    font-size: 1.6rem;
+    color: white;
+    padding: 5px;
+}

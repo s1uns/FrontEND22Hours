@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import TaskGrid from './components/ToDo/TaskGrid';
 
 let globalId = 0;
 
 function App() {
-  const [task, setTask] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [task, setTask] = useState();
+  const [todos, setTodos] = useState([{name: "First task", description: "Desc"}]);
+
+  console.log(todos);
 
   function createTodo(event) {
     event.preventDefault();
@@ -37,7 +40,10 @@ function App() {
       <button type='submit'>Create a ToDo item</button>
     </form>
 
-    <ul>
+        <TaskGrid>
+          {todos}
+        </TaskGrid>
+    {/* <ul>
       {todos.map((item, index) => {
         return <div key={item.id}>
           <li>{item.todo} {item.id}</li>
@@ -45,7 +51,7 @@ function App() {
         </div>
 
       })}
-    </ul>
+    </ul> */}
 
   </div>
 }
