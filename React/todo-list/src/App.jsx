@@ -2,22 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import TaskGrid from './components/ToDo/TaskGrid';
-
+import Popup from './components/layouts/Popup'
 let globalId = 1;
 
 function App() {
   const [task, setTask] = useState();
+  const [description, setDescription] = useState();
   const [todos, setTodos] = useState([{id: 0, name: "First task", description: "Desc"}]);
-
-  console.log(todos);
 
   function createTodo(event) {
     event.preventDefault();
     
     setTodos(oldTodos => {
       setTask('')
+      setDescription('')
 
-      return [...oldTodos, { id: globalId++, name: (task || "No name task"), description: 'default description'}]
+      return [...oldTodos, { id: globalId++, name: (task || "No name task"), description: (description || 'default description')}]
     })
   }
 
@@ -27,18 +27,28 @@ function App() {
 
 
   return <div>
+    <Popup />
     <h1>Best ToDo app ever</h1>
+      <div className='submit-form'>
+        <form onSubmit={createTodo}>
+        Name: <input
+          type="text"
+          className='input'
+          value={task}
+          onChange={e => {
+            setTask(e.target.value);
+          }} />
+        Description:  <input
+          type="text"
+          className='input'
+          value={description}
+          onChange={e => {
+            setDescription(e.target.value);
+          }} />
+        <button type='submit'>Create a ToDo item</button>
+      </form>
+      </div>
 
-    <form onSubmit={createTodo}>
-      <input
-        type="text"
-        className='input'
-        value={task}
-        onChange={e => {
-          setTask(e.target.value);
-        }} />
-      <button type='submit'>Create a ToDo item</button>
-    </form>
 
         <TaskGrid tasks={todos} />
     {/* <ul>

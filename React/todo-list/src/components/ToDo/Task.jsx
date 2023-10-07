@@ -7,7 +7,7 @@ function Task (props){
     return(
         <div className="task">
             <div className="task-info">
-                <h3>{name}</h3>
+                <h6>{name}</h6>
                 <p>{description}</p>
             </div>
         </div>
