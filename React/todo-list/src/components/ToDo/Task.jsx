@@ -7,8 +7,8 @@ function Task (props){
     return(
         <div className="task">
             <div className="task-info">
-                <h1>{name}</h1>
-                <p>Description</p>
+                <h3>{name}</h3>
+                <p>{description}</p>
             </div>
         </div>
     )

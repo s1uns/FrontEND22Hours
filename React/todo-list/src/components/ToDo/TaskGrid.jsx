@@ -9,9 +9,10 @@ function TaskGrid(props) {
         <div className="task-grid">
             {
             tasks.map((item, index) => {
-                return <Task key={item.id}>
-                            {item.name} {item.description}
-                </Task>
+                return <Task key={item.id}
+                             name = {item.name}
+                             description = {item.description}>
+                        </Task>
 
             })}
         </div>

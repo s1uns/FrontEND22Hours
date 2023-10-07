@@ -3,11 +3,11 @@ import './App.css';
 import { useState } from 'react';
 import TaskGrid from './components/ToDo/TaskGrid';
 
-let globalId = 0;
+let globalId = 1;
 
 function App() {
   const [task, setTask] = useState();
-  const [todos, setTodos] = useState([{name: "First task", description: "Desc"}]);
+  const [todos, setTodos] = useState([{id: 0, name: "First task", description: "Desc"}]);
 
   console.log(todos);
 
@@ -17,7 +17,7 @@ function App() {
     setTodos(oldTodos => {
       setTask('')
 
-      return [...oldTodos, { todo: task, id: globalId++ }]
+      return [...oldTodos, { id: globalId++, name: (task || "No name task"), description: 'default description'}]
     })
   }
 
@@ -40,9 +40,7 @@ function App() {
       <button type='submit'>Create a ToDo item</button>
     </form>
 
-        <TaskGrid>
-          {todos}
-        </TaskGrid>
+        <TaskGrid tasks={todos} />
     {/* <ul>
       {todos.map((item, index) => {
         return <div key={item.id}>
