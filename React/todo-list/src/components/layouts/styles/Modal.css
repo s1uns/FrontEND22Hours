@@ -3,9 +3,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #6693F5;	
     padding: 50px;
     z-index: 1000; 
+    display: grid;
+    grid-row: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .overlay {
@@ -16,4 +19,16 @@ right: 0;
 bottom: 0;
 background-color: rgba(0, 0, 0, .7);
 z-index: 1000;
+}
+
+.close-modal-btn {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+
+}
+
+.close-modal-btn:hover {
+    background-color: #DD7973;
+    color: #ED0800;
 }
