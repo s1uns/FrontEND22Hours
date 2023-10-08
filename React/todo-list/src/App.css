@@ -2,16 +2,43 @@
   text-align: center;
 }
 
-.submit-form{
+.submit-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  max-height: 500px;
 }
 
-.submit-form input{
-  display: block;
+.submit-form .input {
+  width: 250px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-size: 1.5em;
+  background-color: rgb(24, 189, 218);
+}
+
+.submit-form .input:focus {
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #2a9ec2;
+  transition: 0.5s all;
+}
+.submit-form .description{
+  font-size: 1rem;
+  height: 100px ;
+}
+.submit-form .submit-btn:hover {
+  background-color: #5DBEA3;
+  color: #476930;
+}
+
+.submit-btn-text {
+  text-align: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -33,4 +60,16 @@
 
 .App-link {
   color: #61dafb;
+}
+.img-container {
+  width: 500px;
+  height: 500px;
+  background-color: blue;
+  margin: 5px 5px 5px 30px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

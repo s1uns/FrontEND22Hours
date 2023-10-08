@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import TaskGrid from './components/ToDo/TaskGrid';
 import Modal from './components/layouts/Modal';
+import Button from './components/layouts/Button';
+
 let globalId = 1;
 
 function App() {
@@ -11,8 +13,7 @@ function App() {
   const [todos, setTodos] = useState([{ id: 0, name: "First task", description: "Desc" }]);
   const [openModal, setOpenModal] = useState(false);
 
-  function createTodo(event) {
-    event.preventDefault();
+  function createTodo() {
 
     setTodos(oldTodos => {
       setTask('')
@@ -27,9 +28,17 @@ function App() {
   }
 
 
-  return <div>
-    <Modal open={openModal} onClose={() => setOpenModal(false)}>
-      <form className='submit-form' onSubmit={createTodo}>
+  return <div className='App'>
+    <Modal open={openModal} onClose={() => {
+      setOpenModal(false);
+      setTask('');
+      setDescription('');
+    }}>
+      <form className='submit-form' onSubmit={(e) => {
+        e.preventDefault();
+        createTodo();
+        setOpenModal(false);
+      }}>
         Name: <input
           type="text"
           className='input'
@@ -37,17 +46,26 @@ function App() {
           onChange={e => {
             setTask(e.target.value);
           }} />
-        Description:  <input
+        Description:  <textarea 
+          cols="40" 
+          rows="5"
           type="text"
-          className='input'
+          className='input description'
           value={description}
           onChange={e => {
             setDescription(e.target.value);
           }} />
-        <button type='submit'>Create a ToDo item</button>
-      </form></Modal>
-    <button onClick={() => setOpenModal(true)}>Add a ToDo</button>
+        <Button type='submit' className='submit-btn'>
+          Create a ToDo item
+        </Button>
+      </form>
+      <div className="img-container"></div>
+      </Modal>
     <h1>Best ToDo app ever</h1>
+    <div className="controls">
+          <Button onClick={() => setOpenModal(true)}>Add a ToDo</Button>
+    </div>
+          <hr />
     {/* <div className='submit-form'>
       <form onSubmit={createTodo}>
         Name: <input
