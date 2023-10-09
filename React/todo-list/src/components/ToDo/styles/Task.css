@@ -1,30 +1,28 @@
 .task {
     max-width: 100%;
-    max-height: 100%;
     background: gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    margin: 15px 0px;
 }
 
 .task-info {
-    font-size: 1.1rem;
     color: white;
     padding: 5px;
     text-align: center;
-    overflow: hidden;
 }
 
 
 
-.task-info h1{
-    padding: 5px;
+.task-info h6{
+    padding: 5px 0px;
     
 }
 .task-info p{
     text-overflow: ellipsis; 
-    white-space: nowrap; 
-    overflow: hidden;
+    white-space: wrap;
+    word-wrap: break-word; 
+    font-size: 0.7em;
 }

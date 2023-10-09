@@ -8,7 +8,7 @@ function Task (props){
         <div className="task">
             <div className="task-info">
                 <h6>{name}</h6>
-                <p>{description}</p>
+                <p>{description.length < 15 ? description : `${description.slice(0, 15)}...`}</p>
             </div>
         </div>
     )

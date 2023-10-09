@@ -46,8 +46,8 @@ function App() {
           onChange={e => {
             setTask(e.target.value);
           }} />
-        Description:  <textarea 
-          cols="40" 
+        Description:  <textarea
+          cols="40"
           rows="5"
           type="text"
           className='input description'
@@ -60,12 +60,12 @@ function App() {
         </Button>
       </form>
       <div className="img-container"></div>
-      </Modal>
+    </Modal>
     <h1>Best ToDo app ever</h1>
     <div className="controls">
-          <Button onClick={() => setOpenModal(true)}>Add a ToDo</Button>
+      <Button onClick={() => setOpenModal(true)}>Add a ToDo</Button>
     </div>
-          <hr />
+    <hr />
     {/* <div className='submit-form'>
       <form onSubmit={createTodo}>
         Name: <input
@@ -86,8 +86,10 @@ function App() {
       </form>
     </div> */}
 
+    <div className="tasks-container">
+      <TaskGrid tasks={todos} />
+    </div>
 
-    <TaskGrid tasks={todos} />
     {/* <ul>
       {todos.map((item, index) => {
         return <div key={item.id}>
