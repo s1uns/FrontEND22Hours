@@ -1,14 +1,14 @@
 import React from "react";
 import './styles/Task.css'
 
-function Task (props){
-    const {id, name, description, image, ...other} = props
+function Task(props) {
+    const { id, name, description, image, ...other } = props
 
-    return(
+    return (
         <div className="task">
             <div className="task-info">
                 <h6>{name}</h6>
-                <p>{description.length < 15 ? description : `${description.slice(0, 15)}...`}</p>
+                <p>{description.length < 30 ? description : `${description.slice(0, 27)}...`}</p>
             </div>
         </div>
     )

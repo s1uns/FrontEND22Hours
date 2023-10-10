@@ -8,13 +8,13 @@ function TaskGrid(props) {
     return (
         <div className="task-grid">
             {
-            tasks.map((item, index) => {
-                return <Task key={item.id}
-                             name = {item.name}
-                             description = {item.description}>
-                        </Task>
+                tasks.map((item, index) => {
+                    return <Task key={item.id}
+                        name={item.name}
+                        description={item.description}>
+                    </Task>
 
-            })}
+                })}
         </div>
     )
 }

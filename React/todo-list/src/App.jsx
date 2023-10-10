@@ -23,11 +23,6 @@ function App() {
     })
   }
 
-  function deleteItem(itemId) {
-    setTodos(oldTodos => oldTodos.filter(item => item.id !== item(itemId)))
-  }
-
-
   return <div className='App'>
     <Modal open={openModal} onClose={() => {
       setOpenModal(false);
@@ -66,41 +61,12 @@ function App() {
       <Button onClick={() => setOpenModal(true)}>Add a ToDo</Button>
     </div>
     <hr />
-    {/* <div className='submit-form'>
-      <form onSubmit={createTodo}>
-        Name: <input
-          type="text"
-          className='input'
-          value={task}
-          onChange={e => {
-            setTask(e.target.value);
-          }} />
-        Description:  <input
-          type="text"
-          className='input'
-          value={description}
-          onChange={e => {
-            setDescription(e.target.value);
-          }} />
-        <button type='submit'>Create a ToDo item</button>
-      </form>
-    </div> */}
 
     <div className="tasks-container-shadow">
       <div className="tasks-container-inset">
         <TaskGrid tasks={todos} />
       </div>
     </div>
-
-    {/* <ul>
-      {todos.map((item, index) => {
-        return <div key={item.id}>
-          <li>{item.todo} {item.id}</li>
-          <button onClick={() => deleteItem(item.id)}>Delete Item</button>
-        </div>
-
-      })}
-    </ul> */}
 
   </div>
 }

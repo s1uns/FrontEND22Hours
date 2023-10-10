@@ -1,10 +1,12 @@
 .task {
-    max-width: 100%;
-    background: gray;
+    min-width: 100px;
+    min-height: 100px;
+    background: #2712e7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 5%;
 }
 
 .task-info {
@@ -15,13 +17,14 @@
 
 
 
-.task-info h6{
+.task-info h6 {
     padding: 5px 0px;
-    
+
 }
-.task-info p{
-    text-overflow: ellipsis; 
+
+.task-info p {
+    text-overflow: ellipsis;
     white-space: wrap;
-    word-wrap: break-word; 
+    word-wrap: break-word;
     font-size: 0.7em;
 }
