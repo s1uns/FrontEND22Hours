@@ -15,7 +15,6 @@ body {
 .circle {
     width: 150px;
     height: 150px;
-    border-radius: 100%;
     box-shadow: -5px -5px 9px #ffffff73, 5px 5px 7px #5e687949;
     display: grid;
     justify-content: center;
@@ -25,6 +24,5 @@ body {
 .incircle {
     width: 120px;
     height: 120px;
-    border-radius: 100%;
     box-shadow: inset -5px -5px 9px #ffffff73, inset 5px 7px #5e687949;
 }
