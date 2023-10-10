@@ -86,8 +86,10 @@ function App() {
       </form>
     </div> */}
 
-    <div className="tasks-container">
-      <TaskGrid tasks={todos} />
+    <div className="tasks-container-shadow">
+      <div className="tasks-container-inset">
+        <TaskGrid tasks={todos} />
+      </div>
     </div>
 
     {/* <ul>

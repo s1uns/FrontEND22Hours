@@ -1,13 +1,12 @@
 .task-grid {
     margin: 15px;
+    height: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 5px;
     background-color: rgba(137, 207, 240, 1);
-    padding: 20px;
     position: relative;
-    z-index: 2;
-
+    padding: 5px;
 }
 
 .task-grid .task:last-child{
