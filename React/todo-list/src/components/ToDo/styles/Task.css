@@ -28,3 +28,7 @@
     word-wrap: break-word;
     font-size: 0.7em;
 }
+
+.img-container {
+    object-fit: cover;
+}
