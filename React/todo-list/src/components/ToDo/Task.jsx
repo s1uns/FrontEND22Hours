@@ -8,7 +8,7 @@ function Task(props) {
     return (
         <div className="task">
             <div className="thumbnail">
-                <img src={image ? image : baseImg}/>
+                <img src={image ? image : baseImg} />
             </div>
             <div className="task-info">
                 <h3>{name}</h3>

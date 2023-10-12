@@ -2,7 +2,7 @@
     width: 100%;
     padding-top: 100%;
     background: #2712e7;
-    border: 3px dashed 	#1134A6;
+    border: 3px dashed #1134A6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,7 @@
     border-radius: 5%;
     flex-grow: 1;
     position: relative;
-    overflow:hidden 
+    overflow: hidden
 }
 
 .task-info {
@@ -46,7 +46,7 @@
     top: 5px;
     margin: auto;
     box-shadow: 3px 3px 15px 1px #83f4f6b2,
-    -3px -3px 15px 1px rgba(34, 67, 124, 0.945);
+        -3px -3px 15px 1px rgba(34, 67, 124, 0.945);
 }
 
 .thumbnail img {
@@ -54,5 +54,5 @@
     height: 100%;
     object-fit: cover;
     box-shadow: inset 3px 3px 15px 1px #83f4f6b2,
-    inset -3px -3px 15px 1px rgba(34, 67, 124, 0.945);
+        inset -3px -3px 15px 1px rgba(34, 67, 124, 0.945);
 }

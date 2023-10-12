@@ -10,7 +10,7 @@ let globalId = 1;
 
 function App() {
   const exampleImg1 = 'https://img02.rl0.ru/afisha/e780x-i/daily.afisha.ru/uploads/images/9/c8/9c8dbd93078c4276a741b47c3fe1502b.jpg'
-  const [task, setTask] = useState({taskName: '', description: ''})
+  const [task, setTask] = useState({ taskName: '', description: '' })
   const [todos, setTodos] = useState([{ id: 0, name: "First task", description: "Desc", image: exampleImg1 }, { id: globalId++, name: (task.taskName || "No name task"), description: (task.description || 'default description'), image: null }]);
   const [openModal, setOpenModal] = useState(false);
 
@@ -18,7 +18,7 @@ function App() {
 
     setTodos(oldTodos => {
       setTask('', '')
-      return [...oldTodos, { id: globalId++, name: (task.taskName || "No name task"), description: (task.description || 'default description'), image: exampleImg1 },  ]
+      return [...oldTodos, { id: globalId++, name: (task.taskName || "No name task"), description: (task.description || 'default description'), image: exampleImg1 },]
     })
   }
 
@@ -37,7 +37,7 @@ function App() {
           className='input'
           value={task.taskName}
           onChange={e => {
-            setTask({...task, taskName: e.target.value})
+            setTask({ ...task, taskName: e.target.value })
           }} />
         Description:  <textarea
           cols="40"
@@ -46,7 +46,7 @@ function App() {
           className='input description'
           value={task.description}
           onChange={e => {
-            setTask({...task, description: e.target.value})
+            setTask({ ...task, description: e.target.value })
           }} />
         <Button type='submit' className='submit-btn'>
           Create a ToDo item
