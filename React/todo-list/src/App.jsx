@@ -5,29 +5,27 @@ import TaskGrid from './components/ToDo/TaskGrid';
 import Modal from './components/layouts/Modal';
 import Button from './components/layouts/Button';
 
+
 let globalId = 1;
 
 function App() {
-  const [task, setTask] = useState();
-  const [description, setDescription] = useState();
-  const [todos, setTodos] = useState([{ id: 0, name: "First task", description: "Desc" }]);
+  const exampleImg1 = 'https://img02.rl0.ru/afisha/e780x-i/daily.afisha.ru/uploads/images/9/c8/9c8dbd93078c4276a741b47c3fe1502b.jpg'
+  const [task, setTask] = useState({taskName: '', description: ''})
+  const [todos, setTodos] = useState([{ id: 0, name: "First task", description: "Desc", image: exampleImg1 }, { id: globalId++, name: (task.taskName || "No name task"), description: (task.description || 'default description'), image: null }]);
   const [openModal, setOpenModal] = useState(false);
 
   function createTodo() {
 
     setTodos(oldTodos => {
-      setTask('')
-      setDescription('')
-
-      return [...oldTodos, { id: globalId++, name: (task || "No name task"), description: (description || 'default description') }]
+      setTask('', '')
+      return [...oldTodos, { id: globalId++, name: (task.taskName || "No name task"), description: (task.description || 'default description'), image: exampleImg1 },  ]
     })
   }
 
   return <div className='App'>
     <Modal open={openModal} onClose={() => {
       setOpenModal(false);
-      setTask('');
-      setDescription('');
+      setTask('', '')
     }}>
       <form className='submit-form' onSubmit={(e) => {
         e.preventDefault();
@@ -37,18 +35,18 @@ function App() {
         Name: <input
           type="text"
           className='input'
-          value={task}
+          value={task.taskName}
           onChange={e => {
-            setTask(e.target.value);
+            setTask({...task, taskName: e.target.value})
           }} />
         Description:  <textarea
           cols="40"
           rows="5"
           type="text"
           className='input description'
-          value={description}
+          value={task.description}
           onChange={e => {
-            setDescription(e.target.value);
+            setTask({...task, description: e.target.value})
           }} />
         <Button type='submit' className='submit-btn'>
           Create a ToDo item
