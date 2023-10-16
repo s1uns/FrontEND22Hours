@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Categories() {
     return (
-        <div class="categories">
+        <div className="categories">
             <ul>
-                <li>All</li>
+                <li className='active'>All</li>
                 <li>Meat</li>
                 <li>Vegetarian</li>
                 <li>Grill</li>
